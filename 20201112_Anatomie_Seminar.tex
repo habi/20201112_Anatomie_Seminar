@@ -27,8 +27,8 @@
 	maxnames=1,
 	sorting=none
 	]{biblatex}
-%\addbibresource{~/P/Documents/library.bib}
-\addbibresource{~/Documents/library.bib}
+\addbibresource{~/P/Documents/library.bib}
+%\addbibresource{~/Documents/library.bib}
 \usepackage{ccicons}
 \usepackage{animate}
 \usepackage{standalone} % for CT animations
@@ -54,7 +54,7 @@
 \newcommand{\imheight}{0.618\paperheight}% set global image height
 \newlength\imagewidth% needed for scalebars
 \newlength\imagescale% needed for scalebars
-\newcommand{\uct}{\si{\micro}CT\xspace}% make our life easier
+\newcommand{\uct}{{\textmu}CT\xspace}% make our life easier
 \newcommand{\eg}{e.\,g.\xspace}%
 \newcommand{\ie}{i.\,e.\xspace}%
 
@@ -88,6 +88,7 @@
 			}%
 		}%
 	}%
+
 
 % Define us a custom footer *with* progress bar, based on https://tex.stackexchange.com/a/59749/828
 \makeatletter
@@ -630,8 +631,8 @@
 \begin{frame}
 	\frametitle{\uct imaging}
 	\centering
-	\includegraphics<1>[height=\imheight]{./images/{{ScanOverviews.104}}}%
-	\includegraphics<2>[height=\imheight]{./images/{{ScanOverviews.24}}}%
+	\includegraphics<1>[height=\imheight]{./images/ScanOverviews.104.png}%
+	\includegraphics<2>[height=\imheight]{./images/ScanOverviews.24.png}%
 \end{frame}	
 	
 \subsection{(hands-off) Image processing}
@@ -653,7 +654,7 @@
 				\def\x{1598}% scalebar-x starting at golden ratio of image width of 2585px = 1598
 				\def\y{1469}% scalebar-y at 90% of image height of 1632px = 1469
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/tooth045/{{Tooth045.mip.rec}}}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/tooth045/Tooth045.mip.rec.png}};
 					% 2585.000px = 25.849963810000002mm -> 100px = 999.999um -> 50.000px = 500um, 10.000px = 100um
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+500,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
@@ -664,7 +665,7 @@
 				\def\x{1478}% scalebar-x starting at golden ratio of image width of 2391px = 1478
 				\def\y{547}% scalebar-y at 90% of image height of 608px = 547
 				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/tooth045/{{Tooth045.mip.rec.crop}}}};
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{./images/tooth045/Tooth045.mip.rec.crop.png}};
 					% 2391.000px = 23.909966526mm -> 100px = 999.999um -> 50.000px = 500um, 10.000px = 100um
 					\draw[|-|,white,shadowed] (\x,\y) -- (\x+500,\y) node [midway,above] {\shadowtext{\SI{5}{\milli\meter}}};
 				\end{tikzpicture}%
@@ -691,10 +692,10 @@
 		\sourcecite{Briseno-Marroquin2015}{Fig.~2}%
 		}
 	\only<2>{%
-		\includegraphics[height=\imheight]{./images/tooth045/{{Tooth045.ExtractedSlices}}}%
+		\includegraphics[height=\imheight]{./images/tooth045/Tooth045.ExtractedSlices.png}%
 		}
 	\only<3>{%
-		\includegraphics[width=\linewidth]{./images/tooth045/{{Tooth045.Briseno}}}%
+		\includegraphics[width=\linewidth]{./images/tooth045/Tooth045.Briseno.png}%
 		}
 \end{frame}
 
