@@ -82,7 +82,7 @@
 		\setlength{\lineskip}{-\beamer@ubOverlap}%
 		\setlength{\parskip}{0pt}%
 		\ifnumgreater{\c@framenumber}{0}{%
-			\raisebox{-\height-2\beamer@ubBorderHeight}[0pt][0pt]{\hspace*{0.86\paperwidth}\includegraphics[width=0.125\paperwidth]{ublogo.pdf}}%
+			\raisebox{-\height-2\beamer@ubBorderHeight}[0pt][0pt]{\hspace*{0.86\paperwidth}\includegraphics[width=0.125\paperwidth]{./ublogo.pdf}}%
 			}{}%
 		\\% empty line for logo alignment
 		\ifnumgreater{\c@framenumber}{1}{%
@@ -100,7 +100,7 @@
 \defbeamertemplate*{headline}{uni bern}{%
 	\ifnumgreater{\c@framenumber}{1}{%
 		\vspace{3.5ex}%
-		\hspace{4.5ex}%
+		\hspace{5.5ex}%
 		\inserttitle%
 	}{}%
 }
@@ -109,7 +109,7 @@
 	\begin{minipage}[c]{\textwidth}%
 		\vspace{0.5ex}%
 		\raggedright%
-		\vspace{3.5ex}%
+		\vspace{2ex}%
 		{\insertframetitle\par}%
 		{\usebeamerfont{framesubtitle}\usebeamercolor*{framesubtitle}\insertframesubtitle}%
 	\end{minipage}%
@@ -125,7 +125,7 @@
 %  \begin{frame}
 %    \vspace*{\stretch{1}}
 %    \begin{center}
-%    \hspace*{30pt}\includegraphics[height=0.6\paperheight]{ublogo.pdf}
+%    \hspace*{30pt}\includegraphics[height=0.6\paperheight]{./ublogo.pdf}
 %    \end{center}
 %    \vspace*{\stretch{1}}
 %  \end{frame}
